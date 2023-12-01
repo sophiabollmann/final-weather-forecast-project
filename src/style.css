@@ -13,13 +13,18 @@ footer {
   border-top: 1px solid #e1f5f4;
   padding: 30px 0 0;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   color: rgba (0, 0, 0, 0.06);
 }
 
 a {
   color: #08588a;
 }
+
+main {
+  padding: 30px 0;
+}
+
 .main-section {
   background: #fffdf6;
   max-width: 600px;
@@ -57,4 +62,20 @@ a {
   cursor: pointer;
   color: #08588a;
   background: transparent;
+}
+
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-app-city {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.weather-app-details {
+  font-size: 16px;
+  line-height: 20px;
 }
