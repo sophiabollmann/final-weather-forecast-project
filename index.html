@@ -9,8 +9,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Roboto:wght@400;700;900&display=swap"
       rel="stylesheet"
-      <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather Forecast</title>
   </head>
   <body>
@@ -31,7 +31,7 @@
       <main>
         <div class="weather-app-data">
           <div>
-            <h1 class="weather-app-city" id="weather-app-city">São Paulo</h1>
+            <h1 class="weather-app-city" id="weather-app-city"></h1>
             <p class="weather-app-details">
               Thursday 10:55, broken clouds
               <br />
@@ -40,7 +40,7 @@
           </div>
           <div class="weather-app-temperature-container">
             <div class="weather-app-icon">🌤️</div>
-            <div class="weather-app-temperature">28</div>
+            <div class="weather-app-temperature" id="temperature"></div>
             <div class="weather-app-unit">ºC</div>
           </div>
         </div>
