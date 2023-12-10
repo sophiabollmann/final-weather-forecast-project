@@ -16,6 +16,8 @@ function refreshWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
   temperatureElement.innerHTML = Math.round(temperature);
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -49,9 +51,16 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
+function getForecast(city) {
+  let apiKey = "401ae4202td0bfa9403o3f05c3a425f7";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
 
+function displayForecast(response) {
+  console.log(response.data);
+
+  let forecastElement = document.querySelector("#forecast");
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -76,4 +85,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("São Paulo");
-displayForecast();
