@@ -106,8 +106,9 @@ main {
   color: #6ac1b8;
 }
 
-.weather-forecast-container {
+.weather-forecast {
   text-align: center;
+  margin-top: 20px;
 }
 
 .weather-forecast-date {
